@@ -6,7 +6,7 @@
 # Eg: $ ruby mu_result.rb may 2010 1339 994
 
 # For finding the result of multiple students:
-# Usage: $ ruby <exam_month> <exam_year> <exam_id> <starting_seat_no>
+# Usage: $ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <starting_seat_no>
 # <ending_seat_no>
 # Eg: $ ruby mu_result.rb may 2010 1339 994 1000
 
@@ -38,7 +38,7 @@ require 'rubygems'
 require 'curb'
 
 #Result page uri change as appropriate
-result_uri = "results.mu.ac.in/get_resultb.php"
+result_uri = "http://results.mu.ac.in/get_resultb.php"
 
 curlobj = Curl::Easy.new(result_uri)
 

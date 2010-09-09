@@ -1,11 +1,14 @@
 Use this script to fetch one or more results from the Mumbai University results
 page.
 
+In Ruby
+-------
 Usage: $ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <seat_no>
 Eg: $ ruby mu_result.rb may 2010 1339 994
 
 For finding the result of multiple students:
-Usage: $ ruby <exam_month> <exam_year> <exam_id> <starting_seat_no> <ending_seat_no>
+Usage: $ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <starting_seat_no> 
+<ending_seat_no>
 Eg: $ ruby mu_result.rb may 2010 1339 994 1000
 
 You can find out the exam id by looking at the link of the result page.
@@ -15,3 +18,14 @@ Dependencies:
 rubygems
 libcurl-devel (required to gem install curb)
 curb - gem install curb
+
+In Python
+---------
+
+Usage: $ python mu_result.py <exam_month> <exam_year> <exam_id> <seat_no>
+Eg: $ python mu_result.py may 2010 1339 994
+
+For finding the result of multiple students:
+Usage: $ python mu_result.py <exam_month> <exam_year> <exam_id> <starting_seat_no>
+<ending_seat_no>
+Eg: $ python mu_result.py may 2010 1339 994 1000
