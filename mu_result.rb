@@ -2,13 +2,13 @@
 
 # mu_result.rb - Fetches the result of Mumbai University students
 
-# Usage: $ ./mu_result.rb <exam_month> <exam_year> <exam_id> <seat_no>
-# Eg: $ ./mu_result.rb may 2010 1339 994
+# Usage: $ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <seat_no>
+# Eg: $ ruby mu_result.rb may 2010 1339 994
 
 # For finding the result of multiple students:
-# Usage: $./mu_result.rb <exam_month> <exam_year> <exam_id> <starting_seat_no>
+# Usage: $ ruby <exam_month> <exam_year> <exam_id> <starting_seat_no>
 # <ending_seat_no>
-# Eg: $ ./mu_result.rb may 2010 1339 994 1000
+# Eg: $ ruby mu_result.rb may 2010 1339 994 1000
 
 # You can find out the exam id by looking at the link of the result page.
 
@@ -51,9 +51,9 @@ end_seat_no = ((ARGV[4].nil?) ? seat_no : ARGV[4]).to_i
 
 
 if exam_month.nil? || exam_year.nil? || exam_id.nil? || seat_no.nil?
-  puts "Usage: $ ./mu_result.rb <exam_month> <exam_year> <exam_id> <seat_no>"
+  puts "Usage: $ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <seat_no>"
   puts "or, "
-  puts "$./mu_result.rb <exam_month> <exam_year> <exam_id> <starting_seat_no>\
+  puts "$ ruby mu_result.rb <exam_month> <exam_year> <exam_id> <starting_seat_no>\
  <ending_seat_no>"
   Process.exit(1)
 end
