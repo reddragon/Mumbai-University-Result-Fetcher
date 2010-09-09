@@ -33,8 +33,7 @@ import sys
 if len(sys.argv) < 5:
     print "Usage: $ python mu_result.py <exam_month> <exam_year> <exam_id> <seat_no>"
     print "or, "
-    print "$ python mu_result.py <exam_month> <exam_year> <exam_id> <starting_seat_no>\
-   <ending_seat_no>"
+    print "$ python mu_result.py <exam_month> <exam_year> <exam_id> <starting_seat_no> <ending_seat_no>"
     sys.exit(1)
 
 result_uri = "http://results.mu.ac.in/get_resultb.php"
@@ -57,7 +56,7 @@ data = { 'exam_month' : exam_month,
 for i in range(int(seat_no), int(end_seat_no) + 1):
     data['seat_no'] = str(i)
     enc_data = urllib.urlencode(data)
-    request = urllib2.Request("http://results.mu.ac.in/get_resultb.php", enc_data)
+    request = urllib2.Request(result_uri, enc_data)
     response = urllib2.urlopen(request)
     response_str = response.read()
     
@@ -66,4 +65,4 @@ for i in range(int(seat_no), int(end_seat_no) + 1):
     if start_i == -1 or end_i == -1 or start_i + 3 >= end_i - 1:
         print i, ": Cannot find"
     else:
-       print i, ":", response_str[start_i + 3 : end_i ]
+        print i, ":", response_str[start_i + 3 : end_i ]

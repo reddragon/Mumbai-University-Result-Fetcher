@@ -43,7 +43,7 @@ result_uri = "http://results.mu.ac.in/get_resultb.php"
 curlobj = Curl::Easy.new(result_uri)
 
 
-exam_month = ARGV[0]
+exam_month = ''
 exam_year = ARGV[1]
 exam_id = ARGV[2]
 seat_no = ARGV[3]
